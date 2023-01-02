@@ -1,0 +1,27 @@
+let text = document.getElementById("text-parallax");
+let sun = document.getElementById("sun");
+let cloud = document.getElementById("cloud");
+let bird1 = document.getElementById("bird1");
+let forest = document.getElementById("forest");
+let rock1 = document.getElementById("rock1");
+let rock2 = document.getElementById("rock2");
+let rock3 = document.getElementById("rock3");
+let water = document.getElementById("water");
+let btn = document.getElementById("btn-parallax");
+let header = document.getElementById("header-parallax");
+let parallax = document.getElementById("parallax");
+let air = document.getElementById("ad-air");
+window.addEventListener('scroll', function () {
+   let value = window.scrollY;
+   text.style.top =  30 + value * -0.2 + '%' ;
+   bird1.style.top = value * -1.5 + 'px';
+   bird1.style.left = value * -5 + 'px'; 
+   btn.style.marginTop = value * 0.9 + 'px';
+   forest.style.top = value * 0.3 + 'px';
+   header.style.top = value * 0.5 + 'px';
+   rock1.style.left = value * -0.4 + 'px';
+   rock2.style.left = value * 0.4 + 'px';
+   rock3.style.left = value * 0.4 + 'px';
+   cloud.style.left = value * -1 + 'px';
+   air.style.left = value * 4 + 'px';
+});

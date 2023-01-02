@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    min-height: 100vh;
+    background-color: grey;
+}
+#parallax {
+    background: linear-gradient(180deg, lightblue,white,white,white);
+    overflow: hidden;
+    height: 640px;
+}
+#header-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#header-parallax .logo {
+    color: #094b65;
+    font-weight: bold;
+    font-size: 3em;
+    text-decoration: none;
+    display: none;
+}
+#header-parallax ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#header-parallax ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+#header-parallax ul li a{
+    text-decoration: none;
+    color: #094b65;
+    padding: 6px 15px;
+    border-radius: 20px;   
+}
+#header-parallax ul li a:hover, #header-parallax ul li a.active {
+    background-color: #094b65;
+    color: #ffff;
+}
+.parallax-move {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.parallax-move #text-parallax {
+    position: absolute;
+    color: #094b65;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: 'Sevillana', cursive;
+    transform: translateY(-50%);
+}
+.parallax-move #text-parallax span {
+    font-size: 0.2em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+#btn-parallax {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background-color: #094b65;
+    border-radius: 40px;
+    transform: translateY(-50px);
+}
+#btn-parallax:hover {
+    background-color: #ffff;
+    color: #094b65;
+    border: 2px solid #094b65;
+}
+.sec {
+    position: relative;
+    padding: 20px;
+    background-color: #094b65;
+    content: "";
+    margin-top: -50px;
+    background: linear-gradient(to top,#094b65,#094b65,#094b65,rgba(173, 216, 230, 0.055));
+}
+.sec h2 {
+    font-size: 3.5em;
+    color: #ffff;
+    margin-bottom: 10px;
+}
+.sec p {
+    font-size: 1.3em;
+    color: #ffff;
+}
+.parallax-move img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+#bird1{
+    height: 150px;
+    width: 100%;
+    margin-top: 10px;
+}
+#water {
+    margin-top: 430px;
+    height: 300px;
+}
+#forest {
+    width: 100%;
+    height: 435px;
+}
+.cartoon {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+}
+#rock1 {
+    margin-top: 450px;
+    width: 320px;
+    height: 140px;
+    margin-left: 3em;
+    z-index: 5;
+}
+#rock2 {
+    margin-top: 400px;
+    width: 320px;
+    height: 140px;
+    margin-left: 65vw;
+}
+#rock3 {
+    margin-top: 500px;
+    width: 320px;
+    height: 140px;
+    margin-left: 40vw;
+}
+#sun {
+    width: 300px;
+    height: 300px;
+    mix-blend-mode: screen;
+    margin-left: 39vw;
+    margin-top: -70px;
+}
+#ad-air {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: -100px;
+}
+#cloud {
+    width: 100%;
+    height: 300px;
+}
+/* medium */
+@media(min-width: 992px) and (max-width: 1199px) {
+    #sun {
+        margin-left: 35vw;
+    }
+    #rock1 {
+        width: 350px;
+        height: 140px;
+        margin-left: 3em;
+    }
+    #rock2 {
+        width: 350px;
+        height: 140px;
+        margin-left: 60vw;
+    }
+    #rock3 {
+        width: 350px;
+        height: 140px;
+        margin-left: 40vw;
+    }
+}
+/*small*/
+@media(min-width: 912px) and (max-width: 991px) {
+    #sun {
+        margin-left: 33vw;
+    }
+    #rock1 {
+        width: 300px;
+        height: 130px;
+        margin-left: 2em;
+    }
+    #rock2 {
+        width: 300px;
+        height: 130px;
+        margin-left: 62vw;
+    }
+    #rock3 {
+        width: 300px;
+        height: 130px;
+        margin-left: 40vw;
+    }
+}
+@media(min-width: 820px) and (max-width: 911px) {
+    #sun {
+        margin-left: 33vw;
+    }
+    #rock1 {
+        width: 300px;
+        height: 130px;
+        margin-left: 2em;
+    }
+    #rock2 {
+        width: 300px;
+        height: 130px;
+        margin-left: 62vw;
+    }
+    #rock3 {
+        width: 300px;
+        height: 130px;
+        margin-left: 40vw;
+    }
+}
+@media(min-width: 768px) and (max-width: 819px) {
+    #sun {
+        margin-left: 30vw;
+    }
+    #rock1 {
+        width: 300px;
+        height: 130px;
+        margin-left: 2em;
+    }
+    #rock2 {
+        width: 300px;
+        height: 130px;
+        margin-left: 62vw;
+    }
+    #rock3 {
+        width: 300px;
+        height: 130px;
+        margin-left: 40vw;
+    }
+}
+/* ex small */
+@media(min-width: 713px) and (max-width: 767px) {
+    #sun {
+        margin-left: 29vw;
+    }
+    #rock1 {
+        width: 250px;
+        height: 100px;
+        margin-left: 1.5em;
+    }
+    #rock2 {
+        width: 250px;
+        height: 100px;
+        margin-left: 60vw;
+    }
+    #rock3 {
+        width: 250px;
+        height: 100px;
+        margin-left: 35vw;
+    }
+}
+@media(min-width: 641px) and (max-width: 712px) {
+    #sun {
+        margin-left: 27vw;
+    }
+    #rock1 {
+        width: 250px;
+        height: 100px;
+        margin-left: 1em;
+    }
+    #rock2 {
+        width: 250px;
+        height: 100px;
+        margin-left: 60vw;
+    }
+    #rock3 {
+        width: 250px;
+        height: 100px;
+        margin-left: 38vw;
+    }
+}
+@media(min-width: 540px) and (max-width: 640px) {
+    #sun {
+        margin-left: 25vw;
+    }
+    #rock1 {
+        width: 200px;
+        height: 100px;
+        margin-left: 2em;
+    }
+    #rock2 {
+        width: 200px;
+        height: 100px;
+        margin-left: 60vw;
+    }
+    #rock3 {
+        width: 200px;
+        height: 100px;
+        margin-left: 40vw;
+    }
+}
+@media(min-width: 440px) and (max-width: 539px) {
+    #sun {
+        margin-left: 20vw;
+    }
+    #rock1 {
+        width: 200px;
+        height: 100px;
+        margin-left: .5em;
+    }
+    #rock2 {
+        width: 200px;
+        height: 100px;
+        margin-left: 55vw;
+    }
+    #rock3 {
+        width: 200px;
+        height: 100px;
+        margin-left: 40vw;
+    }
+}
+@media(min-width: 361px) and (max-width: 383px) {
+    #sun {
+        margin-left: 10vw;
+    }
+    #rock1 {
+        width: 150px;
+        height: 70px;
+        margin-left: 1em;
+    }
+    #rock2 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+    #rock3 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+}
+@media(min-width: 384px) and (max-width: 400px) {
+    #sun {
+        margin-left: 10vw;
+    }
+    #rock1 {
+        width: 150px;
+        height: 70px;
+        margin-left: 1em;
+    }
+    #rock2 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+    #rock3 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+}
+@media(min-width: 401px) and (max-width: 439px) {
+    #sun {
+        margin-left: 13vw;
+    }
+    #rock1 {
+        width: 150px;
+        height: 70px;
+        margin-left: 1em;
+    }
+    #rock2 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+    #rock3 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+}
+/*super*/
+@media(min-width: 321px) and (max-width: 360px) {
+    #sun {
+        margin-left: 8vw;
+    }
+    #rock1 {
+        width: 150px;
+        height: 70px;
+        margin-left: 1em;
+    }
+    #rock2 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+    #rock3 {
+        width: 150px;
+        height: 70px;
+        margin-left: 55vw;
+    }
+}
+@media(max-width: 320px) {
+    #sun {
+        margin-left: 3vw;
+    }
+    #rock1 {
+        width: 150px;
+        height: 70px;
+        margin-left: .2em;
+    }
+    #rock2 {
+        width: 150px;
+        height: 70px;
+        margin-left: 50vw;
+    }
+    #rock3 {
+        width: 150px;
+        height: 70px;
+        margin-left: 50vw;
+    }
+}
