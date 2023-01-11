@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+header .logo {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover{
+    background-color: wheat;
+}
+.section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(lightblue,white);
+}
+.section img {
+    position: absolute;
+    top: 200px;
+    height: 100%;
+}
+#cloud {
+    margin-top: -300px;
+    width: 100%;
+}
+#ocean {
+    width: 100%;
+    margin-top: 300px;
+    height: 300px;
+}
+#beach {
+    width: 100%;
+    margin-top: 10px;
+}
+#sun {
+    margin-top: -400px;
+    margin-left: 50px;
+    mix-blend-mode: screen;
+}
+#text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 4.5vw;
+    text-align: center;
+    margin-left: 50px;
+}
+#btn {
+    text-decoration: none;
+    color: black;
+    background-color: wheat;
+    border-radius: 20px;
+    padding: 8px 30px;
+    font-size: 1em;
+    display: inline-block;
+    z-index: 3;
+    transform: translateY(100px);
+}
