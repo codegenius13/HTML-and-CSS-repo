@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    justify-content: center;
+}
+.bg {
+    background: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/blurring%20loading/new1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100vw;
+    height: 100vh;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(60px);
+}
+.loading-text {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}

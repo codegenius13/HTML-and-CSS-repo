@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Slider</title>
+    <link rel="stylesheet" href="page slider.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Products</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Stores</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="imgBtx">
+            <img src="esque 1.jpg" class="active">
+            <img src="esque 3.jpg">
+            <img src="esque 4.jpg">
+            <img src="esque 6.jpg">
+            <img src="esque 7.jpg">
+        </div>
+        <div class="contextBtx">
+            <div class="active">
+                <h2>Slide Text One</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Blanditiis veritatis maxime, dolor corporis dicta eos 
+                    laudantium culpa modi corrupti suscipit? Odit libero 
+                    velit tempora similique architecto illum sapiente,
+                    reiciendis autem!
+                    <a href="#">Details</a>
+                </p>
+            </div>
+            <div>
+                <h2>Slide Text Two</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Blanditiis veritatis maxime, dolor corporis dicta eos 
+                    laudantium culpa modi corrupti suscipit? Odit libero 
+                    velit tempora similique architecto illum sapiente,
+                    reiciendis autem!
+                    <a href="#">Details</a>
+                </p>
+            </div>
+            <div>
+                <h2>Slide Text Three</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Blanditiis veritatis maxime, dolor corporis dicta eos 
+                    laudantium culpa modi corrupti suscipit? Odit libero 
+                    velit tempora similique architecto illum sapiente,
+                    reiciendis autem!
+                    <a href="#">Details</a>
+                </p>
+            </div>
+            <div>
+                <h2>Slide Text Four</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Blanditiis veritatis maxime, dolor corporis dicta eos 
+                    laudantium culpa modi corrupti suscipit? Odit libero 
+                    velit tempora similique architecto illum sapiente,
+                    reiciendis autem!
+                    <a href="#">Details</a>
+                </p>
+            </div>
+            <div>
+                <h2>Slide Text Five</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Blanditiis veritatis maxime, dolor corporis dicta eos 
+                    laudantium culpa modi corrupti suscipit? Odit libero 
+                    velit tempora similique architecto illum sapiente,
+                    reiciendis autem!
+                    <a href="#">Details</a>
+                </p>
+            </div>
+        </div>
+        <ul class="controls">
+            <li onclick="prevSlide(); nextSlideText();"></li>
+            <li onclick="nextSlide(); prevSlideText();"></li>
+        </ul>
+    </section>
+    <script>
+        const imgBtx = document.querySelector('.imgBtx');
+        const slides = imgBtx.getElementsByTagName('img');
+        var i = 0;
+        function nextSlide() {
+            slides[i].classList.remove('active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('active');
+        }
+        function prevSlide() {
+            slides[i].classList.remove('active');
+            i = (i - 1 + slides.length) % slides.length;
+            slides[i].classList.add('active');
+        }
+
+        const contextBtx = document.querySelector('.contextBtx');
+        const slidesText = contextBtx.getElementsByTagName('div');
+        var j = 0;
+        function nextSlideText() {
+            slidesText[j].classList.remove('active');
+            j = (j + 1) % slidesText.length;
+            slidesText[j].classList.add('active');
+        }
+        function prevSlideText() {
+            slidesText[j].classList.remove('active');
+            j = (j - 1 + slidesText.length) % slidesText.length;
+            slidesText[j].classList.add('active');
+        }
+    </script>
+</body>
+</html>

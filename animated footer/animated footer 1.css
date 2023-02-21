@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: green;
+    overflow: hidden;
+}
+.container {
+    min-height: 400px;
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: red;
+}
+.container h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: green;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.container .curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+}
+.container .curve::before {
+    content: '';
+    width: 55%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    transform: translate(85%,60%);
+    background-color: green;
+}
+.container .curve::after {
+    content: '';
+    width: 55%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    background-color: red;
+    transform: translate(-4%,40%);
+    z-index: -1;
+}

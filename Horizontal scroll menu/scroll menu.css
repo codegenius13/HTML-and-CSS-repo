@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    height: 100vh;
+}
+.horizontal-scroll {
+    width: 600px;
+    height: 80px;
+    background-color: beige;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.horizontal-scroll .btn-scroll {
+    background-color: maroon;
+    color: goldenrod;
+    box-shadow: 0 0 10px red;
+    padding: 5px 8px;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 5px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 1s;
+}
+.story-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    flex-direction: row;
+    left: 0;
+    transition: 1s all ease-out;
+}
+.story-circle {
+    background: linear-gradient(green,red);
+    width: 60px;
+    height: 60px;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotateZ(45deg);
+}
+.story-circle img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid moccasin;
+    transform: rotateZ(-45deg);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Menu Indicator</title>
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/indicator.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon glyphicon glyphicon-home"></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon glyphicon glyphicon-info-sign"></span>
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon glyphicon glyphicon-cog"></span>
+                    <span class="text">Services</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon glyphicon glyphicon-duplicate"></span>
+                    <span class="text">Projects</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon glyphicon glyphicon-certificate"></span>
+                    <span class="text">Awards</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) => {
+                item.classList.remove('active');
+                this.classList.add('active');
+            });
+        }
+        list.forEach((item) => {
+            item.addEventListener('click', activeLink)
+        });
+    </script>
+</body>
+</html>

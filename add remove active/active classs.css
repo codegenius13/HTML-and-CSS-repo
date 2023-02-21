@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li {
+    list-style: none;
+}
+ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: midnightblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+ul li.active a {
+    background: black;
+    color: white;
+}
