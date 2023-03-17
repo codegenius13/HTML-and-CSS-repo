@@ -1,0 +1,154 @@
+html,body {
+    font-size: 1rem;
+    color: maroon;
+    line-height: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul.slides {
+    position: relative;
+    width: 100%;
+    min-height: 760px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    overflow: hidden;
+}
+ul li {
+    display: flex;
+    position: relative;
+    flex: 1;
+    transition: all 0.35 ease-out;
+    align-items: stretch;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+} 
+ul li::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    background-color: rgba(15, 15, 15, 0.7);
+}
+ul li:nth-child(1) {
+    background-image: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/flex%20slider/esque%204.jpg');
+}
+ul li:nth-child(2) {
+    background-image: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/flex%20slider/esque%205.jpg');
+}
+ul li:nth-child(3) {
+    background-image: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/flex%20slider/esque%206.jpg');
+}
+ul li:nth-child(4) {
+    background-image: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/flex%20slider/esque%207.jpg');
+}
+ul li:nth-child(5) {
+    background-image: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/flex%20slider/esque%201.jpg');
+}
+ul li:nth-child(6) {
+    background-image: url('file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/CSS%20practice/Advance/flex%20slider/esque%203.jpg');
+}
+ul li h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    z-index: 30;
+    transform-origin: 0 0;
+    transition: top 0.35s ease, opacity 0.15s;
+    transform: translate(-50%, -50%) rotate(0deg);
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 24px;
+}
+ul li .section-content {
+    position: relative;
+    align-self: flex-end;
+    width: 100%;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.35s 0.1s ease;
+}
+.section-content .inner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-column-gap: 20px;
+    padding: 20px;
+}
+.bio {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: min-content;
+    grid-gap: 24px;
+}
+ul li.active {
+    flex: 6;
+    cursor: default;
+}
+ul li.active::before {
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111 100%);
+}
+ul li.active h3 {
+    top: 200%;
+    opacity: 0;
+}
+h2 {
+    font-size: 16px;
+    list-style: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+ul li.active .section-content {
+    opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+    h2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    .section-content .inner {
+        grid-template-columns: calc(100% - 340px) 300px;
+        grid-auto-flow: column;
+        grid-column-gap: 40px;
+        padding: 40px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    html, body {
+        line-height: 24px;
+    }
+     ul.slides {
+        flex-direction: row;
+    }
+    ul li h3 {
+        font-size: 32px;
+        top: 100%;
+        transform: translate(-20px, -50%) rotate(-90deg);
+    }
+    .section-content .inner {
+        grid-template-columns: 460px 200px;
+        grid-auto-flow: column;
+        grid-column-gap: 40px;
+        padding: 40px;
+    }
+    h2 {
+        font-size: 64px;
+        line-height: 64px;
+    }
+}
