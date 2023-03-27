@@ -1,0 +1,417 @@
+body {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: url("file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/kBerry%20local/kBerry%20Images/background.jpg");
+    background-size: cover;
+    height: (100vh - 80px)
+}
+/** HEADER SECTION **/
+#header-nav { 
+    background-color: black;
+    border-radius: 0;
+    border: 0;
+    top: 0;
+    width: 100%;
+}
+*{
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+div.logo {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: wheat;
+    line-height: 80px;
+    display: flex;
+}
+div.logo #name {
+    padding-top: 15px;
+}
+div.logo #name a {
+    text-decoration: none;
+    color: purple;
+}
+#hungry {
+    font-size: 16px;
+    float: right;
+    margin-top: -80px;
+    margin-right: 150px;
+    padding-top: 10px;
+    display: flex;
+}
+#hungry a {
+    text-decoration: none;
+    color: purple;
+}
+#delivery {
+    margin-left: 50px;
+    width: 90px;
+    background-color: palevioletred;
+}
+#pickup {
+    margin-left: 10px;
+    width: 90px;
+    background-color: palevioletred;
+}
+#catering {
+    margin-left: 10px;
+    width: 90px;
+    background-color: palevioletred;
+}
+#hungry button:hover {
+    box-shadow: 0 1px 5px 1px purple;
+    background-color: blueviolet;
+    transition: .5s;
+}
+#description {
+    margin-left: 170px;
+    margin-top: -50px;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blueviolet;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+#unorder {
+    float: right;
+    margin-right: 40px;
+    padding-bottom: 5px;
+    left: 0;
+}
+#list {
+    display: flex;
+    margin-top: -35px;
+}
+#link {
+    color: deeppink;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    border-radius: 3px;
+    transition: .5s; 
+}
+#link:hover {
+    color: pink;
+}
+#link.active {
+    color: pink;
+}
+.slide {
+    height: (100vh - 80px);
+    top: 0;
+    width: 70%;
+    position: absolute;
+    background: url("file:///C:/Users/DAMILARE/Desktop/html%20,%20css%20javascript%20practice/jjj/kBerry%20local/kBerry%20Images/logo%20pink%20large.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .5s ease;
+    right: 0;
+    transform: translateY(-150%);
+}
+#types-one a  {
+    color: #fff;
+    text-transform: uppercase;
+}
+#types-one a i {
+    transition: .5s;
+}
+#types-two a {
+    font-weight: bold;
+    font-size: large;
+    color: purple;
+}
+input {
+    display: none;
+    visibility: hidden;
+    right: 0;
+}
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: darkmagenta;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    background-color:white;
+    transition: 0.3s ease;
+}
+.toggle .top_line {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.toggle .middle_line {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.toggle .bottom_line {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+input:checked ~ .toggle .top_line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line {
+    opacity: 0;
+    transform: translateX(5px);
+}
+input:checked ~ .slide {
+    transform: translate(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+#title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    font-style: italic;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+#title #slide-logo {
+    margin-top: -10px;
+}
+#baked i {
+   font-size: 20px;
+}
+#button {
+    display: flex;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#button #Delivery {
+    background-color: plum;
+    color: black;
+}
+#button #Pickup {
+    background-color: plum;
+    color: black;
+}
+#button #Catering {
+    background-color: plum;
+    color: black;
+}
+#types-one i:hover {
+    color: deeppink;
+}
+#types-one i.active {
+    color: deeppink;
+}
+.slide hr {
+    margin-top: 20px;
+}
+#logo-img {
+    float: right;
+}
+/**** END HEADER SECTION ****/
+/**** BODY SECTION ****/
+#content  {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+#content img{
+    position: absolute;
+    margin-top: -20px;
+    width: 100%;
+    height: 600px;
+}
+p {
+    text-align: center;
+}
+#checkout {
+    width: 420px;
+    display: flex;
+    margin: auto;
+}
+#checkout a {
+    display: block;
+    position: absolute;
+    z-index: 1111;
+    transition: .2s;
+    margin-top: 200px;
+    font-size: 30px;
+    flex: 1;
+    line-height: 50px;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+}
+#checkout a:hover {
+    color: gray;
+}
+#previous {
+   margin-left: -300px;
+}
+#next{
+    margin-left: 700px;
+}
+/**** ANIMATION STYLES ****/
+.fadeinimg {
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/******** MEDIA DEVICES *****/
+/********** Large Devices only **********/
+@media (min-width: 1200px) {
+
+}
+/********** Medium Devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+div.logo {
+    font-size: 20px;
+}
+#hungry {
+    font-size: 16px;
+    float: right;
+    margin-top: -80px;
+    margin-right: 2px;
+    padding-top: 10px;
+    display: flex;
+}
+#delivery {
+    margin-left: 10px;
+    width: 90px;
+    background-color: palevioletred;
+}
+#unorder {
+    margin-right: 10px;
+}
+}
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+#hungry {
+    font-size: 16px;
+    float: right;
+    margin-top: -80px;
+    margin-right: 45px;
+    padding-top: 10px;
+    display: flex;
+}
+#description {
+    padding-bottom: 15px;
+}
+#list{
+    display: block;
+    margin-top: 20px;
+    line-height: 30px;
+}
+#link {
+    font-size: 20px;
+}
+#link:hover {
+    background: none;
+    color: maroon;
+}
+#link.active {
+    background: none;
+    color: maroon;
+}
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: darkmagenta;
+    padding-top: 9px;
+    right: 9px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#baked {
+    margin-left: 60px;
+}
+#button {
+    margin-right: 150px;
+}
+#button #Delivery {
+    margin-right: 10px;
+    width: 100px;
+}
+#button #Pickup {
+    margin-right: 10px;
+    width: 100px;
+}
+#button #Catering {
+    margin-right: 10px;
+    width: 100px;
+}
+}
+/********** Extra small devices only ***********/
+@media (max-width: 767px) {
+#hungry {
+    margin-top: -60px;
+    margin-right: 80px;
+}
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: darkmagenta;
+    padding-top: 9px;
+    right: 40px;
+    top: 30px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#baked {
+    margin-right: 80px;
+}
+#types-two a {
+    margin-right: 5px;
+}
+#button {
+    margin-right: 55px;
+}
+#button #Delivery {
+    margin-right: 10px;
+    width: 100px;
+}
+#button #Pickup {
+    margin-right: 10px;
+    width: 100px;
+}
+#button #Catering {
+    margin-right: 10px;
+    width: 100px;
+}
+}
+/********** SUPER EXTRA SMALL DEVICES *********/
+@media (min-width: 479px) {
+}
+/****** END MEDIA DEVICES ********/

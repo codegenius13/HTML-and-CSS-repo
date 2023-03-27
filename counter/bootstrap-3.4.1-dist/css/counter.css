@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    color: maroon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4000px;
+}
+.container {
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.container h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0 15px;
+    border-left: 3px solid maroon;
+}
+.stats {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(31, 30, 30);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.stats div {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+.stats div i {
+    font-size: 3.5em;
+}
+.stats div span {
+    color: antiquewhite;
+    font-weight: 100;
+    font-size: 35px;
+    font-style: italic;
+}
+.stats div p {
+    text-transform: capitalize;
+    position: relative;
+    font-weight: 300;
+    font-size: 20px;
+    padding-bottom: 7px;
+}
+.stats div p::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    background-color: maroon;
+}
+.num {
+    display: flex;
+}
+.num b {
+    font-size: 35px;
+    color: antiquewhite;
+    margin-left: 5px;
+}
